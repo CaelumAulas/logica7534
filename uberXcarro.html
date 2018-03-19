@@ -1,0 +1,17 @@
+Distância: 15km
+
+<h4>Carro</h4>
+Valor estacionamento: R$17,00<br>
+Valor gasolina: R$15,00<br>
+Valor total: R$30,00
+<br>
+<h4>Uber</h4>
+
+<script>
+    var valor_padrao_uber=25.70;
+    document.write("Valor padrão: R$"+valor_padrao_uber+"<br>");
+    var taxa_dinamica=1.2;
+    document.write("Taxa dinâmica: "+taxa_dinamica+"<br>");
+    var valor_total_uber=valor_padrao_uber*taxa_dinamica;
+    document.write("Valor total: R$"+valor_total_uber.toFixed(2).replace(".",","));
+</script>
