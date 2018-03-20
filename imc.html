@@ -4,10 +4,16 @@
     function pegaNumeroDoUsuario() {
         return parseFloat(prompt(mensagem_do_prompt).replace(",",".").replace("o","0"));
     }
+    var valor;
+    function conversaoDeIMC() {
+        var valor_convertido=valor.toFixed(2).replace(".",",");
+        return valor_convertido;
+    }
     mensagem_do_prompt="Digite o peso em kg";
     var peso=pegaNumeroDoUsuario();
     mensagem_do_prompt="Digite a altura em metros";
     var altura=pegaNumeroDoUsuario();
     var imc = peso/(altura*altura);
-    document.write("O seu IMC é: "+imc.toFixed(2).replace(".",","));
+    valor=imc;
+    document.write("O seu IMC é: "+conversaoDeIMC());
 </script>
