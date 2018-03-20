@@ -11,28 +11,28 @@
     mensagem_do_prompt="Digite o valor do estacionamento";
     var valor_estacionamento=pegaNumeroDoUsuario();
     var valor = valor_estacionamento;
-    function conversaoDeMoeda() {
+    function conversaoDeNumero() {
         var valor_convertido=valor.toFixed(2).replace(".",",");
         return valor_convertido;
     }
-    document.write("Valor estacionamento: R$"+conversaoDeMoeda()+"<br>");
+    document.write("Valor estacionamento: R$"+conversaoDeNumero()+"<br>");
     mensagem_do_prompt="Digite o consumo médio do seu veículo";
     var consumo=pegaNumeroDoUsuario();
     mensagem_do_prompt="Digite o preço por litro da gasolina";
     var preco_por_litro=pegaNumeroDoUsuario();
     var valor_gasolina = (trajeto/consumo)*preco_por_litro;
     valor = valor_gasolina;
-    document.write("Valor gasolina: R$"+conversaoDeMoeda()+"<br>");
+    document.write("Valor gasolina: R$"+conversaoDeNumero()+"<br>");
     var valor_total_carro=valor_estacionamento+valor_gasolina;
     valor=valor_total_carro;
-    document.write("Valor total: R$"+conversaoDeMoeda());
+    document.write("Valor total: R$"+conversaoDeNumero());
     document.write("<h4>Uber</h4>");
     var valor_padrao_uber=25.70;
     valor=valor_padrao_uber;
-    document.write("Valor padrão: R$"+conversaoDeMoeda()+"<br>");
+    document.write("Valor padrão: R$"+conversaoDeNumero()+"<br>");
     var taxa_dinamica=1.2;
     document.write("Taxa dinâmica: "+taxa_dinamica+"<br>");
     var valor_total_uber=valor_padrao_uber*taxa_dinamica;
     valor=valor_total_uber
-    document.write("Valor total: R$"+conversaoDeMoeda());
+    document.write("Valor total: R$"+conversaoDeNumero());
 </script>
