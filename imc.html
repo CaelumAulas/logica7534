@@ -1,0 +1,7 @@
+<meta charset="utf-8">
+<script>
+var peso=parseFloat(prompt("Digite o seu peso em kg").replace(",","."));
+var altura=parseFloat(prompt("Digite a sua altura em metros").replace(",","."));
+var imc = peso/(altura*altura);
+document.write("O seu IMC é: "+imc.toFixed(2).replace(".",","));
+</script>
