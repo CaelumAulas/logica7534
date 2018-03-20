@@ -1,17 +1,25 @@
 <script>
-    var trajeto= parseFloat(prompt("Digite a distância percorrida"));
+    var mensagem_do_prompt;
+    function pegaNumeroDoUsuario() {
+        return parseFloat(prompt(mensagem_do_prompt).replace(",",".").replace("o","0"));
+    }
+    mensagem_do_prompt="Digite a distância percorrida";
+    var trajeto= pegaNumeroDoUsuario();
     document.write("Distância: "+trajeto+"km");
 
     document.write("<h4>Carro</h4>");
-    var valor_estacionamento=parseFloat(prompt("Digite o valor do estacionamento"));
+    mensagem_do_prompt="Digite o valor do estacionamento";
+    var valor_estacionamento=pegaNumeroDoUsuario();
     var valor = valor_estacionamento;
     function conversaoDeMoeda() {
         var valor_convertido=valor.toFixed(2).replace(".",",");
         return valor_convertido;
     }
     document.write("Valor estacionamento: R$"+conversaoDeMoeda()+"<br>");
-    var consumo=parseFloat(prompt("Digite o consumo do seu veículo"));
-    var preco_por_litro=parseFloat(prompt("Digite o preço por litro da gasolina"));
+    mensagem_do_prompt="Digite o consumo médio do seu veículo";
+    var consumo=pegaNumeroDoUsuario();
+    mensagem_do_prompt="Digite o preço por litro da gasolina";
+    var preco_por_litro=pegaNumeroDoUsuario();
     var valor_gasolina = (trajeto/consumo)*preco_por_litro;
     valor = valor_gasolina;
     document.write("Valor gasolina: R$"+conversaoDeMoeda()+"<br>");
