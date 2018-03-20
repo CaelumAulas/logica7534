@@ -1,7 +1,13 @@
 <meta charset="utf-8">
 <script>
-var peso=parseFloat(prompt("Digite o seu peso em kg").replace(",","."));
-var altura=parseFloat(prompt("Digite a sua altura em metros").replace(",","."));
-var imc = peso/(altura*altura);
-document.write("O seu IMC é: "+imc.toFixed(2).replace(".",","));
+    var mensagem_do_prompt;
+    function pegaNumeroDoUsuario() {
+        return parseFloat(prompt(mensagem_do_prompt).replace(",",".").replace("o","0"));
+    }
+    mensagem_do_prompt="Digite o peso em kg";
+    var peso=pegaNumeroDoUsuario();
+    mensagem_do_prompt="Digite a altura em metros";
+    var altura=pegaNumeroDoUsuario();
+    var imc = peso/(altura*altura);
+    document.write("O seu IMC é: "+imc.toFixed(2).replace(".",","));
 </script>
