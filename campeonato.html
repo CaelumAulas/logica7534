@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<script>
+    var nome_time1 = prompt("Digite o nome do time");
+    var vitorias_time1 = parseInt(prompt("Digite a quantidade de vitórias do time "+nome_time1));
+    var empates_time1 = parseInt(prompt("Digite a quantidade de empates do time "+nome_time1));
+    var pontuacao_time1 = vitorias_time1*3+empates_time1;
+
+    var nome_time2 = prompt("Digite o nome do time 2");
+    var vitorias_time2 = parseInt(prompt("Digite a quantidade de vitórias do time "+nome_time2));
+    var empates_time2 = parseInt(prompt("Digite a quantidade de empates do time "+nome_time2));
+    var pontuacao_time2 = vitorias_time2*3+empates_time2;
+    
+    if (pontuacao_time1 > pontuacao_time2) {
+        document.write("O "+nome_time1+" está ganhando!<br><br>");   
+    }
+    if (pontuacao_time1 < pontuacao_time2) {
+        document.write("O "+nome_time2+" está ganhando!<br><br>");   
+    }
+    if (pontuacao_time2 == pontuacao_time1) {
+        document.write("Estão empatados!<br><br>")
+    }
+
+    document.write("O time "+nome_time2+" tem "+ pontuacao_time2+" pontos.<br>");
+    document.write("O time "+nome_time1+" tem "+ pontuacao_time1 +" pontos.<br>");
+</script>
