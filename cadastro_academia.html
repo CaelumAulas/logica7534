@@ -1,0 +1,15 @@
+<script src="biblioteca_de_funcoes.js"></script>
+<script>
+var nome = prompt("Digite nome do cliente");
+var idade = parseInt(prompt("Digite a idade do cliente"));
+var altura = pegaNumeroDoUsuario("Digite a altura do cliente");
+var peso = pegaNumeroDoUsuario("Digite o peso do cliente");
+var imc = peso/(altura*altura);
+
+document.write("<br>Nome: "+nome);
+document.write("<br>Idade:"+idade+"anos");
+document.write("<br>Altura:"+conversaoDeNumero(altura)+"m");
+document.write("<br>Peso:"+peso+"kg");
+document.write("<br>IMC:"+conversaoDeNumero(imc));
+
+</script>
