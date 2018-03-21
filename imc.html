@@ -5,4 +5,14 @@
     var altura=pegaNumeroDoUsuario("Digite a altura em metros");
     var imc = peso/(altura*altura);
     document.write("O seu IMC é: "+conversaoDeNumero(imc));
+    
+    if(imc<18.5) {
+        document.write("<br>come!");
+    }
+    if (imc >= 35) {
+        document.write("<br>corre!");
+    }
+    if (imc >= 18.5 && imc < 35) {
+        document.write("<br>você está saudável!");
+    }
 </script>
