@@ -1,37 +1,27 @@
 <script src="http://192.168.114.142:8080/biblioteca_de_funcoes.js"></script>
 <script>
-    var mensagem_do_prompt;
-    mensagem_do_prompt="Digite a distância percorrida";
-    var trajeto= pegaNumeroDoUsuario();
+    var trajeto= pegaNumeroDoUsuario("Digite a distância percorrida");
     document.write("Distância: "+trajeto+"km");
 
     document.write("<h4>Carro</h4>");
-    mensagem_do_prompt="Digite o valor do estacionamento";
-    var valor_estacionamento=pegaNumeroDoUsuario();
-    var valor = valor_estacionamento;
-    document.write("Valor estacionamento: R$"+conversaoDeNumero()+"<br>");
+    var valor_estacionamento=pegaNumeroDoUsuario("Digite o valor do estacionamento");
+    document.write("Valor estacionamento: R$"+conversaoDeNumero(valor_estacionamento)+"<br>");
     
-    mensagem_do_prompt="Digite o consumo médio do seu veículo";
-    var consumo=pegaNumeroDoUsuario();
-    mensagem_do_prompt="Digite o preço por litro da gasolina";
-    var preco_por_litro=pegaNumeroDoUsuario();
+    var consumo=pegaNumeroDoUsuario("Digite o consumo médio do seu veículo");
+    var preco_por_litro=pegaNumeroDoUsuario("Digite o preço por litro da gasolina");
     var valor_gasolina = (trajeto/consumo)*preco_por_litro;
-    valor = valor_gasolina;
-    document.write("Valor gasolina: R$"+conversaoDeNumero()+"<br>");
+    document.write("Valor gasolina: R$"+conversaoDeNumero(valor_gasolina)+"<br>");
     
     var valor_total_carro=valor_estacionamento+valor_gasolina;
-    valor=valor_total_carro;
-    document.write("Valor total: R$"+conversaoDeNumero());
+    document.write("Valor total: R$"+conversaoDeNumero(valor_total_carro));
     
     document.write("<h4>Uber</h4>");
     var valor_padrao_uber=25.70;
-    valor=valor_padrao_uber;
-    document.write("Valor padrão: R$"+conversaoDeNumero()+"<br>");
+    document.write("Valor padrão: R$"+conversaoDeNumero(valor_padrao_uber)+"<br>");
     
     var taxa_dinamica=1.2;
     document.write("Taxa dinâmica: "+taxa_dinamica+"<br>");
     
     var valor_total_uber=valor_padrao_uber*taxa_dinamica;
-    valor=valor_total_uber
-    document.write("Valor total: R$"+conversaoDeNumero());
+    document.write("Valor total: R$"+conversaoDeNumero(valor_total_uber));
 </script>

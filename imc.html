@@ -1,13 +1,8 @@
 <meta charset="utf-8">
-<script src="http://192.168.114.142:8080/biblioteca_de_funcoes.js"></script>
+<script src="biblioteca_de_funcoes.js"></script>
 <script>
-    var mensagem_do_prompt;
-    var valor;
-    mensagem_do_prompt="Digite o peso em kg";
-    var peso=pegaNumeroDoUsuario();
-    mensagem_do_prompt="Digite a altura em metros";
-    var altura=pegaNumeroDoUsuario();
+    var peso=pegaNumeroDoUsuario("Digite o peso em kg");
+    var altura=pegaNumeroDoUsuario("Digite a altura em metros");
     var imc = peso/(altura*altura);
-    valor=imc;
-    document.write("O seu IMC é: "+conversaoDeNumero());
+    document.write("O seu IMC é: "+conversaoDeNumero(imc));
 </script>
