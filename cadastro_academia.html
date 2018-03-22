@@ -1,10 +1,11 @@
 <script src="biblioteca_de_funcoes.js"></script>
 <script>
 var nome = prompt("Digite nome do cliente");
-//var idade = parseInt(prompt("Digite a idade do cliente"));
-var dia_nascimento = parseInt(prompt("Digite o dia de nascimento do cliente"));
-var mes_nascimento = parseInt(prompt("Digite o mês de nascimento do cliente"));
-var ano_nascimento = parseInt(prompt("Digite o ano de nascimento do cliente"));
+var data_nascimento = prompt("Digite a data de nascimento do cliente. Ex: dd/mm/aaaa");
+var data_nascimento_separada = data_nascimento.split("/");
+var dia_nascimento = parseInt(data_nascimento_separada[0]);
+var mes_nascimento = parseInt(data_nascimento_separada[1]);
+var ano_nascimento = parseInt(data_nascimento_separada[2]);
 var altura = pegaNumeroDoUsuario("Digite a altura do cliente");
 var peso = pegaNumeroDoUsuario("Digite o peso do cliente");
 var imc = peso/(altura*altura);
