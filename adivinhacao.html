@@ -11,7 +11,8 @@
     
     var texto_digitado = prompt("Digite um número de 0 a 100");
     
-    while (texto_digitado>100 || texto_digitado<0 || isNaN(texto_digitado)) {
+    while (texto_digitado>100 || texto_digitado<0 || 
+            isNaN(texto_digitado)) {
         alert("Valor inválido!");
         texto_digitado = prompt("Digite um número de 0 a 100");
     }
@@ -19,14 +20,24 @@
 
     var acertou = "Acertou! :)";
     var errou = "Errrrrrrou!";
-    var posicao=0;
+    /*var posicao=0;
     while (posicao<numeros_computador.length) {
         if (numero_escolhido == numeros_computador[posicao]) {
             document.write(acertou);
             break; //sai do while
         } 
         posicao=posicao+1;
+    }*/
+    for (var posicao=0;posicao<numeros_computador.length;posicao=posicao+1) {
+        if (numero_escolhido == numeros_computador[posicao]) {
+            document.write(acertou);
+            break; //sai do while
+        }
     }
+
+
+
+
     if (posicao >= numeros_computador.length) {
         document.write("errrrrrrou!");
     }
