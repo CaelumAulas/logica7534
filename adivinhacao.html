@@ -1,8 +1,14 @@
 <meta charset="utf-8">
 <script>
-    var numeros_computador = [27,5,34,79,62,41];
-    //var numero_computador = parseInt(Math.random()*11);
+    var numeros_computador = [];
+    numeros_computador.push(parseInt(Math.random()*101));
+    numeros_computador.push(parseInt(Math.random()*101));
+    numeros_computador.push(parseInt(Math.random()*101));
+    numeros_computador.push(parseInt(Math.random()*101));
+    numeros_computador.push(parseInt(Math.random()*101));
+    numeros_computador.push(parseInt(Math.random()*101));
     console.log(numeros_computador);
+    
     var texto_digitado = prompt("Digite um número de 0 a 100");
     
     while (texto_digitado>100 || texto_digitado<0 || isNaN(texto_digitado)) {
@@ -14,14 +20,14 @@
     var acertou = "Acertou! :)";
     var errou = "Errrrrrrou!";
     var posicao=0;
-    while (posicao<6) {
+    while (posicao<numeros_computador.length) {
         if (numero_escolhido == numeros_computador[posicao]) {
             document.write(acertou);
             break; //sai do while
         } 
         posicao=posicao+1;
     }
-    if (posicao >= 6) {
+    if (posicao >= numeros_computador.length) {
         document.write("errrrrrrou!");
     }
 </script>
