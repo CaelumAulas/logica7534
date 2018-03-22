@@ -1,27 +1,27 @@
 <meta charset="utf-8">
 <script>
-    var numero_computador = parseInt(Math.random()*11);
-    console.log(numero_computador);
-    var texto_digitado = prompt("Digite um número de 0 a 10");
+    var numeros_computador = [27,5,34,79,62,41];
+    //var numero_computador = parseInt(Math.random()*11);
+    console.log(numeros_computador);
+    var texto_digitado = prompt("Digite um número de 0 a 100");
     
-    while (texto_digitado>10 || texto_digitado<0 || isNaN(texto_digitado)) {
+    while (texto_digitado>100 || texto_digitado<0 || isNaN(texto_digitado)) {
         alert("Valor inválido!");
-        texto_digitado = prompt("Digite um número de 0 a 10");
+        texto_digitado = prompt("Digite um número de 0 a 100");
     }
     var numero_escolhido = parseInt(texto_digitado);
-    
+
     var acertou = "Acertou! :)";
     var errou = "Errrrrrrou!";
-    if (numero_escolhido == numero_computador) {
-        document.write(acertou);
-    } else {
-        document.write(errou);
+    var posicao=0;
+    while (posicao<6) {
+        if (numero_escolhido == numeros_computador[posicao]) {
+            document.write(acertou);
+            break; //sai do while
+        } 
+        posicao=posicao+1;
     }
-    /*if (numero_escolhido != numero_computador) {
-        document.write(errou);
-    }*/
-    /*if (numero_escolhido>numero_computador || 
-        numero_escolhido<numero_computador) {
-            document.write(errou);
-    }*/
+    if (posicao >= 6) {
+        document.write("errrrrrrou!");
+    }
 </script>
