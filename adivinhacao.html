@@ -4,10 +4,11 @@
     console.log(numero_computador);
     var numero_escolhido = parseInt(prompt("Digite um número de 0 a 10"));
     
-    if (numero_escolhido>10 || numero_escolhido<0 || isNaN(numero_escolhido)) {
+    while(numero_escolhido>10 || numero_escolhido<0 || isNaN(numero_escolhido)) {
         alert("Valor inválido!");
         numero_escolhido = parseInt(prompt("Digite um número de 0 a 10"));
     }
+    
     
     var acertou = "Acertou! :)";
     var errou = "Errrrrrrou!";
