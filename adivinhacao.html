@@ -8,7 +8,7 @@
     numeros_computador.push(parseInt(Math.random()*101));
     numeros_computador.push(parseInt(Math.random()*101));
     console.log(numeros_computador);
-    
+    /*
     var texto_digitado = prompt("Digite um número de 0 a 100");
     
     while (texto_digitado>100 || texto_digitado<0 || 
@@ -16,6 +16,15 @@
         alert("Valor inválido!");
         texto_digitado = prompt("Digite um número de 0 a 100");
     }
+*/
+    for (var texto_digitado = prompt("Digite um número de 0 a 100");
+    texto_digitado>100 || texto_digitado<0 || isNaN(texto_digitado);
+    texto_digitado = prompt("Digite um número de 0 a 100")) {
+        alert("Valor inválido!");
+    }
+
+
+
     var numero_escolhido = parseInt(texto_digitado);
 
     var acertou = "Acertou! :)";
